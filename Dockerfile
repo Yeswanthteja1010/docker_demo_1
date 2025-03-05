@@ -7,10 +7,10 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
-COPY requirements.txt /app/
+COPY requirement.txt /app/
 
 # Install any needed dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirement.txt
 
 # Make port 5000 available to the world outside this container
 EXPOSE 5000
