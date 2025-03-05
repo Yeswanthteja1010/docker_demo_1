@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, teja'
+    return 'Hello, World!'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Change this to 0.0.0.0 to make the app accessible from outside the container
+    app.run(host='0.0.0.0', port=5000, debug=True)
